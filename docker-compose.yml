@@ -1,4 +1,4 @@
-version: "3.9"
+# filepath: [docker-compose.yml](http://_vscodecontentref_/0)
 services:
   api:
     build: .

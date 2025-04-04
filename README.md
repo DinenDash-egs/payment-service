@@ -1,23 +1,38 @@
-# payment-service (fo itestado em linux)
+# payment-service
 
-## o que fazer
+## 1. Criar e ativar o ambiente virtual (venv)
 
-```sh
+```bash
+python3 -m venv .venv
+```
+
+```bash
 source .venv/bin/activate
 ```
 
-```sh
-docker compose up --build
+## 2. Instalar as dependências do projeto
+
+```bash
+pip install -r requirements.txt
 ```
 
-## para aceder é
+```bash
+pip install --upgrade pip
+pip install --upgrade -r requirements.txt
+```
 
-http://0.0.0.0:8003/docs
+## 3. Executar o projeto com Docker
 
-## caso dê problemas com o docker fazer o comando seguinte:
-
-```sh
+```bash
 sudo systemctl restart docker
 ```
 
-## o que fazer
+```bash
+docker compose up --build --remove-orphans
+```
+
+## 4. Acessar a API
+
+```
+http://0.0.0.0:8003/docs
+```
